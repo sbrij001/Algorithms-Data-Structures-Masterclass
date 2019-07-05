@@ -25,8 +25,11 @@ function same(arr1,arr2){
   return true
 }
 
+// for a freq counter use an object to construct a profile,
+// a way of breaking down the contents of arr/strings
+// compare that breakdown to the other object looks from arr/string
 
-//REFACTORED
+ //REFACTORED
 // Time complexity O(n)
 function same(arr1, arr2){
   if (arr1.length != arr2.length) {
