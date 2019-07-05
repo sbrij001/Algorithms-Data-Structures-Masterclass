@@ -7,7 +7,7 @@
 
 
 // a NAIVE solution
-
+// o(n)^2
 function same(arr1,arr2){
   if (arr1.length != arr2.length) {
     return false;
@@ -21,6 +21,35 @@ function same(arr1,arr2){
       }
       //will remove the element from the array if it matches
       arr2.splice(correctIndex, 1)
+  }
+  return true
+}
+
+
+//REFACTORED
+// Time complexity O(n)
+function same(arr1, arr2){
+  if (arr1.length != arr2.length) {
+    return false;
+  }
+
+  let frequencyCounter1 = {}
+  let frequencyCounter2 = {}
+
+  for (value of arr1) {
+    frequencyCounter1[value] = (frequencyCounter1[value] || 0) + 1
+  }
+  for (value of arr2) {
+    frequencyCounter2[value] = (frequencyCounter2[value] || 0) + 1
+  }
+
+  for (let key in frequencyCounter1) {
+    if (!(key ** 2 in frequencyCounter2)) {
+      return false
+    }
+    if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
+      return false
+    }
   }
   return true
 }
