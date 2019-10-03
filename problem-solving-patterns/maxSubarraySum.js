@@ -33,6 +33,7 @@ function maxSubarraySum(array, num){
 
 
 //refactor
+//time complexity O(n)
 function maxSubarraySum(array, num){
   let maxSum = 0;
   let tempSum = 0;
@@ -46,7 +47,10 @@ function maxSubarraySum(array, num){
 
   tempSum = maxSum
   for (let i = num; i < array.length; i++) {
+    // the below code adds together the elements up til n
+    // and next time aroud it will subtract the previous index and add the new set of numbers 
     tempSum = tempSum - array[i - num] + array[i];
+    // gets the max sum between maxSum and tempSum
     maxSum =  Math.max(maxSum, tempSum);
   }
   return maxSum;
