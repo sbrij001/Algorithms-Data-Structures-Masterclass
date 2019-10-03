@@ -12,17 +12,31 @@
 // solution 2
 // follows the fundamentals of merge sort
 function mergeTwoArrays(arr1, arr2){
-  //base case
-  if( arr1.concat(arr2).length === 1){
-    return arr1.concat(arr2)
+  const result = [];
+  let firstItemArr1 = arr1[0];
+  let firstItemArr2 = arr2[0];
+  let i = 1;
+  let j = 1;
+  // base case
+  if(arr1.length === 0){
+    return arr2
+  }
+    if(arr2.length === 0){
+    return arr1
   }
 
-  const left = arr1.sort();
-  const right = arr2.sort();
-  const merged = left.concat(right);
-  console.log(merged)
+  while(firstItemArr1 || firstItemArr2 ){
+    if(!firstItemArr1 || firstItemArr1 < firstItemArr2){
+      result.push(firstItemArr1)
+      firstItemArr1 = arr1[i]
+      i++
+    }else{
+      result.push(firstItemArr2)
+      firstItemArr2 = arr2[j]
+      j++
+    }
+  }
+  console.log(result)
 }
 
-// function merge(arr){
-//
-// }
+mergeTwoArrays([0,3,4,31],[4,6,30])
