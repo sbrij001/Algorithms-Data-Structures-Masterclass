@@ -6,4 +6,20 @@
 // check if first arr element is less than second array element
 // if so push that ele into merged arr
 // if not push ele of the second arr
-// return merged arr 
+// return merged arr
+
+function merge = (nums1, m, nums2,n) => {
+  const merged = [];
+  let firstEleInNums1 = nums1[0];
+  let firstEleInNums2 = nums1[0];
+  i = 1;
+  j = 1;
+  // base cases
+  if(m === 0){
+      return nums2
+  }
+  if(n === 0){
+      return nums1
+  }
+
+}
