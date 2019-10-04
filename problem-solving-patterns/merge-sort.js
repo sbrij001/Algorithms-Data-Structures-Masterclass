@@ -37,5 +37,5 @@ firstEleInNums1 = 2
       j++
     }
   }
-
+return merged;
 }
