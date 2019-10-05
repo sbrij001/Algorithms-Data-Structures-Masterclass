@@ -31,12 +31,12 @@
       }
     }
 
-    while( arr1.length === 0 && arr2.length > j){
+    while(j < arr2.length){
       merge.push(arr2[j])
       j++
     }
-    
-    while( arr2.length === 0 && arr1.length > i){
+
+    while(i < arr1.length){
       merge.push(arr1[i])
       i++
     }
