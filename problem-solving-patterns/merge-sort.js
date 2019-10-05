@@ -30,5 +30,15 @@
         arr2[j]++
       }
     }
+
+    while( arr1.length === 0 && arr2.length > j){
+      merge.push(arr2[j])
+      j++
+    }
+    
+    while( arr2.length === 0 && arr1.length > i){
+      merge.push(arr1[i])
+      i++
+    }
     return merged;
   }
