@@ -16,12 +16,12 @@
   // once we finish with all the values in the first array
   // we push the rest of the items from the second array
 
-  function merger(arr1, arr2){
+  function merge(arr1, arr2){
     const merged = [];
     let i = 0;
     let j = 0;
 
-    while(arr1.length > 0){
+    while(i < arr1.length &&  j < arr2.length){
       if (arr1[i] > arr2[j]{
         merged.push[arr1[i]]
         arr1[i]++
